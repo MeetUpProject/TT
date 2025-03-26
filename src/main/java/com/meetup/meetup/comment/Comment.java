@@ -2,26 +2,36 @@ package com.meetup.meetup.comment;
 
 import com.meetup.meetup.post.Post;
 import jakarta.persistence.*;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
 @Entity
+@EntityListeners(AuditingEntityListener.class)
+@Getter
+@Setter
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; //
 
     //부모댓글 아이디
-    private Long parentId;
+    @ManyToOne
+    @JoinColumn(name = "parent_id")
+    private Comment parentId;
+
 
     //내용
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
     //댓글 작성 시간
-    @Column(name = "created_t")
+    @Column(name = "created_t", updatable = false)
     @CreatedDate
     private LocalDateTime createdTime;
 

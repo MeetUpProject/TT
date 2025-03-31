@@ -1,13 +1,11 @@
-package com.meetup.meetup.post;
+package com.meetup.meetup.PostPackage.comment.post;
 
-import com.meetup.meetup.post.postdto.PostCreateDto;
-import com.meetup.meetup.post.postdto.PostResponseDto;
+import com.meetup.meetup.PostPackage.comment.post.postdto.PostResponseDto;
+import com.meetup.meetup.PostPackage.comment.post.postdto.PostCreateDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor

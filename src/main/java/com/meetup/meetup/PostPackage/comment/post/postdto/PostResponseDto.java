@@ -1,7 +1,7 @@
-package com.meetup.meetup.post.postdto;
+package com.meetup.meetup.PostPackage.comment.post.postdto;
 
-import com.meetup.meetup.comment.Comment;
-import com.meetup.meetup.post.Post;
+import com.meetup.meetup.PostPackage.comment.Comment;
+import com.meetup.meetup.PostPackage.comment.post.Post;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

@@ -1,7 +1,7 @@
-package com.meetup.meetup.post;
+package com.meetup.meetup.PostPackage.comment.post;
 
-import com.meetup.meetup.post.postdto.PostCreateDto;
-import com.meetup.meetup.post.postdto.PostResponseDto;
+import com.meetup.meetup.PostPackage.comment.post.postdto.PostCreateDto;
+import com.meetup.meetup.PostPackage.comment.post.postdto.PostResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*    ;

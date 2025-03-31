@@ -1,4 +1,4 @@
-package com.meetup.meetup.post;
+package com.meetup.meetup.PostPackage.comment.post;
 
 import org.springframework.data.repository.CrudRepository;
 

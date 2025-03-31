@@ -1,16 +1,12 @@
-package com.meetup.meetup.post;
+package com.meetup.meetup.PostPackage.comment.post;
 
-import com.meetup.meetup.comment.Comment;
+import com.meetup.meetup.PostPackage.comment.Comment;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
-
-import java.security.Timestamp;
 
 import java.time.LocalDateTime;
 import java.util.List;

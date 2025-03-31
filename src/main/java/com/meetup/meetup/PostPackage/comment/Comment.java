@@ -1,6 +1,6 @@
-package com.meetup.meetup.comment;
+package com.meetup.meetup.PostPackage.comment;
 
-import com.meetup.meetup.post.Post;
+import com.meetup.meetup.PostPackage.comment.post.Post;
 import jakarta.persistence.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;

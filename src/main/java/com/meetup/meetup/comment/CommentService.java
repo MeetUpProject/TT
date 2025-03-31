@@ -81,5 +81,6 @@ public class CommentService {
 
         commentRepository.deleteById(commentId);
 
+        return new CommentResponseDto(comment);
     }
 }

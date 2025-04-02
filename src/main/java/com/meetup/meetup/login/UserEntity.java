@@ -9,6 +9,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -57,7 +58,7 @@ public class UserEntity implements UserDetails {
 
     @Enumerated(EnumType.STRING) // 가독성을 위함
     @ElementCollection // db에 저장
-    private Set<Role> roles;
+    private Role role;
 
 
     public enum Role {
@@ -71,9 +72,7 @@ public class UserEntity implements UserDetails {
      */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() { // <?> 아직 미정된 타입
-        return roles.stream()
-                .map(role -> new SimpleGrantedAuthority(role.name()))
-                .collect(Collectors.toList());
+        return Collections.singletonList(new SimpleGrantedAuthority(role.name()));
     }
 
     /**

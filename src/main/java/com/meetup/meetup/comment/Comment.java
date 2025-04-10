@@ -8,7 +8,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import java.time.LocalDateTime;
 
 @Entity
-public class Comment {
+public class    Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; //

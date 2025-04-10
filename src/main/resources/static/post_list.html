@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 목록</title>
+</head>
+<body>
+<h1>📋 게시글 목록</h1>
+
+<!-- 글쓰기 버튼 -->
+<button onclick="location.href='/post_write.html'">글쓰기</button>
+
+<!-- 검색창 -->
+<input type="text" id="searchInput" placeholder="검색어 입력">
+<button onclick="searchPosts()">검색</button>
+
+<hr>
+
+<!-- 게시글 목록 -->
+<div id="postList"></div>
+
+<script src="/js/post_list.js"></script>
+</body>
+</html>

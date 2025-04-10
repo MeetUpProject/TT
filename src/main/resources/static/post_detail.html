@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 상세</title>
+</head>
+<body>
+<h1>게시글 상세</h1>
+<div id="postDetail">
+    <p><strong id="title"></strong></p>
+    <p id="content"></p>
+    <p><em id="writer"></em></p>
+</div>
+
+<input type="password" id="passwordInput" placeholder="비밀번호 입력">
+<input type="hidden" id="postId"> <!-- postId는 JS에서 설정 -->
+<br>
+
+<button type="button" onclick="editPost()">수정</button>
+<button type="button" onclick="deletePost()">삭제</button>
+
+<script src="/js/post_detail.js"></script>
+</body>
+</html>

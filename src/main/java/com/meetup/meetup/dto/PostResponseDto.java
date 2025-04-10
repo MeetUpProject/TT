@@ -1,16 +1,20 @@
-package com.meetup.meetup.post.postdto;
+package com.meetup.meetup.dto;
 
 import com.meetup.meetup.comment.Comment;
 import com.meetup.meetup.post.Post;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Getter
+@Data
 @NoArgsConstructor
+//추가
+@Builder
+@AllArgsConstructor
+
 public class PostResponseDto {
+    private Long id;
     private String title;
     private String content;
     private String meet_time;
@@ -20,13 +24,15 @@ public class PostResponseDto {
     private LocalDateTime updated_at;
     private LocalDateTime created_at;
     private int view_count;
-
+    private String password;
     private int min_age;
     private int max_age;
     private String place;
     private List<Comment> comments;
-
+    private String writer;
     public PostResponseDto(Post post) {
+        this.writer = post.getWriter();
+        this.id = post.getId();
         this.title = post.getTitle();
         this.content = post.getContent();
         this.meet_time = post.getMeet_time();
@@ -40,5 +46,6 @@ public class PostResponseDto {
         this.max_age = post.getMax_age();
         this.place = post.getPlace();
         this.comments = post.getComments();
+        this.password = post.getPassword();
     }
 }

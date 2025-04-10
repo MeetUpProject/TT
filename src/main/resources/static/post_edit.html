@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 수정</title>
+</head>
+<body>
+<h1>게시글 수정</h1>
+
+<form id="editForm">
+    <label>제목: <input type="text" id="title"></label><br>
+    <label>내용: <textarea id="content"></textarea></label><br>
+    <label>작성자: <input type="text" id="writer" disabled></label><br>
+    <label>비밀번호: <input type="password" id="password"></label><br>
+
+    <input type="hidden" id="postId">
+    <button type="submit">수정</button>
+</form>
+
+<script src="/js/post_edit.js"></script>
+</body>
+</html>

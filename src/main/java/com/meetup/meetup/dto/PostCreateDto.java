@@ -1,22 +1,29 @@
-    package com.meetup.meetup.post.postdto;
+    package com.meetup.meetup.dto;
 
     import com.fasterxml.jackson.annotation.JsonInclude;
     import com.meetup.meetup.post.Post;
-    import lombok.Getter;
-    import lombok.NoArgsConstructor;
+    import lombok.*;
 
-    @Getter
+
     @NoArgsConstructor
     @JsonInclude(JsonInclude.Include.NON_NULL)
+    //추가
+    @Builder
+    @Data
+    @AllArgsConstructor
+
     public class PostCreateDto {
 
         private String title;
         private String content;
+        private String writer;
         private int is_cruit;
         private String meet_time;
+        private String password;
 
         public PostCreateDto(Post post ) {
             this.title = post.getTitle();
+            this.writer = post.getWriter();
             this.content = post.getContent();
             this.is_cruit = post.getIs_cruit();
             this.meet_time = post.getMeet_time();

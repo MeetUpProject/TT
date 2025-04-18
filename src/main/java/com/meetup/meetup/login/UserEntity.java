@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@Table(name = "user") // user 테이블과 매핑
+@Table(name = "users") // user 테이블과 매핑
 @Entity // 해당 클래스를 엔티티로 인식, CRUD 사용 가능
 @Getter
 @Builder // 빌더 패턴 자동 구현 -> 가독성 높임, 직관적 객체 생성 가능
@@ -28,7 +28,6 @@ public class UserEntity implements UserDetails {
     @Column(name = "user_id", nullable = false)
     private String userId; // 회원가입 및 로그인 시 사용하는 사용자 id
 
-    @Getter
     @Column(name = "user_name", nullable = false)
     private String username;
 
@@ -57,7 +56,7 @@ public class UserEntity implements UserDetails {
     private String nickname;
 
     @Enumerated(EnumType.STRING) // 가독성을 위함
-    @ElementCollection // db에 저장
+//    @ElementCollection // db에 저장
     private Role role;
 
 

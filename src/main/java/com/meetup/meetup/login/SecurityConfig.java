@@ -59,7 +59,7 @@ public class SecurityConfig {
                                 "/images/**",
                                 "/favicon.ico").permitAll() // h2, 로그인, 로그아웃, 정적 파일, 브라우저 아이콘 접근 허용
                         .anyRequest().authenticated()) // 그 외 요청은 인증 필요
-                //.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class) // spring security에 jwtFilter 추가
+                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class) // spring security에 jwtFilter 추가
                 .build();
 
 

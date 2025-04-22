@@ -28,6 +28,7 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody RequestDto requestDto) {
+        System.out.println("로그인 시도: " + requestDto.getId());
         try {
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(requestDto.getId(), requestDto.getPassword())

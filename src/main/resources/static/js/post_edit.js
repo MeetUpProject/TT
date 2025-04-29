@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const postId = urlParams.get("id");
+
+    const pathParts = window.location.pathname.split("/");
+    const postId = pathParts[pathParts.length - 1];
 
     if (!postId) {
         alert("게시글 ID가 없습니다.");
@@ -47,7 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(response => {
                 if (response.ok) {
                     alert("수정 완료!");
-                    window.location.href = `/post_list.html`;
+                    window.location.href = `/post/list`;
+
                 } else {
                     alert("수정 실패. 비밀번호를 확인해주세요.");
                 }

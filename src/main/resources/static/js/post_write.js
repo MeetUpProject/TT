@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(response => {
                 if (response.ok) {
                     alert("게시글이 등록되었습니다.");
-                    window.location.href = "/post_list.html"; // 목록 페이지로 이동
+                    window.location.href = "/post/list"; // 목록 페이지로 이동
                 } else {
                     alert("게시글 등록 실패");
                 }

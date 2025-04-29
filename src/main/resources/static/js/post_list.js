@@ -28,7 +28,7 @@ function loadPosts(keyword = "") {
                         <strong>${post.title}</strong><br>
                         <span>${post.writer ?? '익명'}</span>
                     </p>
-                    <button onclick="location.href='/post_detail.html?id=${post.id}'">상세</button>
+                    <button onclick="location.href='/post/${post.id}'">상세</button>
                     <hr>
                 `;
                 postList.appendChild(postElement);
